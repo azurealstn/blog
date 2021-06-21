@@ -4,6 +4,7 @@ import com.azurealstn.blog.domain.Member;
 import org.springframework.web.bind.annotation.*;
 
 /**
+ * GET, POST, PUT, DELETE 요청 메소드를 테스트 하기 위한 클래스
  * 사용자가 요청 -> 응답(data) : @RestController
  * 사용자가 요청 -> 응답(HTML) : @Controller
  * 테스트는 Postman을 통해 실행할 것! (그 이유는 브라우저 요청은 get 요청밖에 안된다.)

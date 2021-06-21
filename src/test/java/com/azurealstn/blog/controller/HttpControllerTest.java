@@ -46,7 +46,7 @@ public class HttpControllerTest {
     @Test
     public void Member_GET_테스트() throws Exception {
         //Member member = new Member(1L, "azure", "1234", "azure@naver.com");
-        int id = 1;
+        Long id = 1L;
         String username = "azure";
         String password = "1234";
         String email = "azure@naver.com";
@@ -57,10 +57,8 @@ public class HttpControllerTest {
                 .param("password", password)
                 .param("email", email))
                 .andExpect(status().isOk())
-                .andExpect(jsonPath("$.id", is(id)))
-                .andExpect(jsonPath("$.username", is(username)))
-                .andExpect(jsonPath("$.password", is(password)))
-                .andExpect(jsonPath("$.email", is(email)));
+                .andExpect(content().string("get 요청 테스트: " + id + ", " + username + ", " + password + ", " + email))
+                .andDo(print());
     }
 
     @Test
