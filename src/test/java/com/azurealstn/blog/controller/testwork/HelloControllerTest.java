@@ -1,5 +1,6 @@
-package com.azurealstn.blog.controller;
+package com.azurealstn.blog.controller.testwork;
 
+import com.azurealstn.blog.controller.testwork.HelloController;
 import org.junit.jupiter.api.Test;
 import org.junit.jupiter.api.extension.ExtendWith;
 import org.springframework.beans.factory.annotation.Autowired;

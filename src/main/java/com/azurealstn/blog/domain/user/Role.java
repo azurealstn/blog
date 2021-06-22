@@ -2,6 +2,7 @@ package com.azurealstn.blog.domain.user;
 
 import lombok.Getter;
 import lombok.RequiredArgsConstructor;
+import lombok.Setter;
 
 @Getter
 @RequiredArgsConstructor
@@ -12,4 +13,5 @@ public enum Role {
 
     private final String key;
     private final String title;
+
 }

@@ -1,4 +1,4 @@
-package com.azurealstn.blog.controller;
+package com.azurealstn.blog.controller.testwork;
 
 import com.azurealstn.blog.domain.Member;
 import org.springframework.web.bind.annotation.*;

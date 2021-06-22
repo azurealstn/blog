@@ -1,4 +1,4 @@
-package com.azurealstn.blog.controller;
+package com.azurealstn.blog.controller.testwork;
 
 import com.azurealstn.blog.dto.HelloResponseDto;
 import org.springframework.stereotype.Controller;

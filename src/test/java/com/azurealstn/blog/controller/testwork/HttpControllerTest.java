@@ -1,5 +1,6 @@
-package com.azurealstn.blog.controller;
+package com.azurealstn.blog.controller.testwork;
 
+import com.azurealstn.blog.controller.testwork.HttpController;
 import com.azurealstn.blog.domain.Member;
 import com.fasterxml.jackson.databind.ObjectMapper;
 import org.junit.jupiter.api.BeforeEach;
