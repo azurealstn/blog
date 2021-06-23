@@ -1,0 +1,24 @@
+<%@ page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8"%>
+<%@ include file="../layout/header.jsp"%>
+
+    <div class="container">
+        <h2 class="mb-4">회원가입</h2>
+        <form>
+            <div class="form-group">
+                <label for="username">아이디:</label>
+                <input type="username" class="form-control" id="username" placeholder="아이디를 입력하세요.">
+            </div>
+            <div class="form-group">
+                <label for="password">비밀번호:</label>
+                <input type="password" class="form-control" id="password" placeholder="비밀번호를 입력하세요.">
+            </div>
+            <div class="form-group">
+                <label for="email">이메일:</label>
+                <input type="email" class="form-control" id="email" placeholder="이메일을 입력하세요.">
+            </div>
+
+        </form>
+        <button id="btn-save" class="btn btn-primary mb-5">회원가입</button>
+    </div>
+
+<%@ include file="../layout/footer.jsp"%>
