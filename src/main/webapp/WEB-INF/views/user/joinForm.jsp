@@ -6,7 +6,7 @@
         <form>
             <div class="form-group">
                 <label for="username">아이디:</label>
-                <input type="username" class="form-control" id="username" placeholder="아이디를 입력하세요.">
+                <input type="text" class="form-control" id="username" placeholder="아이디를 입력하세요.">
             </div>
             <div class="form-group">
                 <label for="password">비밀번호:</label>
@@ -20,5 +20,5 @@
         </form>
         <button id="btn-save" class="btn btn-primary mb-5">회원가입</button>
     </div>
-
+    <script src="/js/user.js"></script>
 <%@ include file="../layout/footer.jsp"%>
