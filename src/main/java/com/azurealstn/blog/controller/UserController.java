@@ -5,16 +5,17 @@ import org.springframework.web.bind.annotation.GetMapping;
 
 /**
  * 로그인과 회원가입 페이지 화면
+ * 인증: /auth/**, index.jsp(메인) 기본 허용
  */
 @Controller
 public class UserController {
 
-    @GetMapping("/user/joinForm")
+    @GetMapping("/auth/joinForm")
     public String joinForm() {
         return "user/joinForm";
     }
 
-    @GetMapping("/user/loginForm")
+    @GetMapping("/auth/loginForm")
     public String loginForm() {
         return "user/loginForm";
     }

@@ -44,7 +44,7 @@ public class UserApiControllerTest {
     @Test
     public void 회원가입() throws Exception {
         //given
-        String username = "minsu";
+        String username = "user";
         String password = "1234";
         String email = "azurealstn@naver.com";
 

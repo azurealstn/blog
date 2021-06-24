@@ -34,4 +34,8 @@ public class UserSaveRequestDto {
                 .role(Role.GUEST)
                 .build();
     }
+
+    public void hashing(String password) {
+        this.password = password;
+    }
 }
