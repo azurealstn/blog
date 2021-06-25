@@ -2,12 +2,12 @@ package com.azurealstn.blog.controller.api;
 
 import com.azurealstn.blog.config.auth.PrincipalDetail;
 import com.azurealstn.blog.dto.BoardSaveRequestDto;
+import com.azurealstn.blog.dto.ResponseDto;
 import com.azurealstn.blog.service.BoardService;
 import lombok.RequiredArgsConstructor;
+import org.springframework.http.HttpStatus;
 import org.springframework.security.core.annotation.AuthenticationPrincipal;
-import org.springframework.web.bind.annotation.PostMapping;
-import org.springframework.web.bind.annotation.RequestBody;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.bind.annotation.*;
 
 /**
  * 글(Board) 관련 API
@@ -24,5 +24,23 @@ public class BoardApiController {
     @PostMapping("/api/v1/board")
     public Long save(@RequestBody BoardSaveRequestDto requestDto, @AuthenticationPrincipal PrincipalDetail principalDetail) {
         return boardService.save(requestDto, principalDetail.getUser());
+    }
+
+    /**
+     * 글 삭제하기
+     */
+    @DeleteMapping("/api/v1/board/{id}")
+    public Long deleteById(@PathVariable Long id) {
+        boardService.deleteById(id);
+        return id;
+    }
+
+    /**
+     * 글 수정하기
+     */
+    @PutMapping("/api/v1/board/{id}")
+    public Long update(@PathVariable Long id, @RequestBody BoardSaveRequestDto requestDto) {
+        boardService.update(id, requestDto);
+        return id;
     }
 }

@@ -4,6 +4,7 @@
     <div class="container">
         <h2 class="mb-4">글쓰기</h2>
         <form>
+            <input type="hidden" id="id" value="${board.id}">
             <div class="form-group">
                 <label for="title">제목:</label>
                 <input value="${board.title}" type="text" class="form-control" id="title" placeholder="제목을 입력하세요.">
