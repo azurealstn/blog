@@ -4,6 +4,7 @@ import com.azurealstn.blog.domain.board.Board;
 import com.azurealstn.blog.domain.board.BoardRepository;
 import com.azurealstn.blog.domain.user.User;
 import com.azurealstn.blog.dto.BoardSaveRequestDto;
+import com.azurealstn.blog.dto.BoardUpdateRequestDto;
 import lombok.RequiredArgsConstructor;
 import org.springframework.data.domain.Page;
 import org.springframework.data.domain.Pageable;
@@ -56,7 +57,7 @@ public class BoardService {
      * 글 수정하기
      */
     @Transactional
-    public Long update(Long id, BoardSaveRequestDto requestDto) {
+    public Long update(Long id, BoardUpdateRequestDto requestDto) {
         Board board = boardRepository.findById(id)
                 .orElseThrow(() -> new IllegalArgumentException("글 수정하기 실패: 아이디를 찾을 수 없습니다. id: " + id));
         board.update(requestDto.getTitle(), requestDto.getContent());

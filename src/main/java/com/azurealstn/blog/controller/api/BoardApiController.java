@@ -2,6 +2,7 @@ package com.azurealstn.blog.controller.api;
 
 import com.azurealstn.blog.config.auth.PrincipalDetail;
 import com.azurealstn.blog.dto.BoardSaveRequestDto;
+import com.azurealstn.blog.dto.BoardUpdateRequestDto;
 import com.azurealstn.blog.dto.ResponseDto;
 import com.azurealstn.blog.service.BoardService;
 import lombok.RequiredArgsConstructor;
@@ -39,7 +40,7 @@ public class BoardApiController {
      * 글 수정하기
      */
     @PutMapping("/api/v1/board/{id}")
-    public Long update(@PathVariable Long id, @RequestBody BoardSaveRequestDto requestDto) {
+    public Long update(@PathVariable Long id, @RequestBody BoardUpdateRequestDto requestDto) {
         boardService.update(id, requestDto);
         return id;
     }
